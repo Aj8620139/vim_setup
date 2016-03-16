@@ -19,12 +19,12 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
-Plugin 'davidhalter/jedi'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'Lokaltog/vim-powerline'
-Plugin 'tomasr/molokai'
+"Plugin 'Lokaltog/vim-powerline'
+"Plugin 'tomasr/molokai'
 
 call vundle#end()
 filetype plugin indent on
@@ -34,10 +34,18 @@ filetype plugin indent on
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
-let g:molokai_original = 1
+"let g:molokai_original = 1
 "let g:rehash256 = 1
 "
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
+"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'  
+"nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"let g:ycm_confirm_extra_conf=0
+"let g:ycm_collect_identifiers_from_tag_files = 1
+
+"let g:jedi#auto_initialization = 0
+"let g:jedi#use_tabs_not_buffers = 1
+"let g:jedi#popup_select_first = 0
 
 nmap <F3> :NERDTreeToggle<CR>
 nmap <F4> :TagbarToggle<CR>
