@@ -55,21 +55,22 @@ nmap <F4> :TagbarToggle<CR>
 
 func SetTitle() 
     if &filetype == 'sh'
-        call setline(1, "\#######################################")
-        call append(line("."), "\#File Name: ".expand("%"))
-        call append(line(".")+1, "\#Created Time: ".strftime("%Y-%m-%d %H:%M:%S"))
-        call append(line(".")+2, "\#######################################")
-        call append(line(".")+3, "#!/bin/bash")
+        call setline(1, "#!/bin/sh")
+        call append(line("."), "#######################################")
+        call append(line(".")+1, "\#File Name: ".expand("%"))
+        call append(line(".")+2, "\#Created Time: ".strftime("%Y-%m-%d %H:%M:%S"))
+        call append(line(".")+3, "\#######################################")
         call append(line(".")+4, "")
         call append(line(".")+5, "")
     elseif &filetype == 'python'
-        call setline(1,"\#######################################")
-        call append(line("."), "\#File Name: ".expand("%"))
-        call append(line(".")+1, "\#Created Time: ".strftime("%Y-%m-%d %H:%M:%S"))
-        call append(line(".")+2, "\#######################################")
-        call append(line(".")+3, "#!/usr/bin/env python")
-        call append(line(".")+4, "")
+        call setline(1,"#!/usr/bin/env python")
+        call append(line("."), "# *-*coding: UTF-8 *-*")
+        call append(line(".")+1, "#######################################")
+        call append(line(".")+2, "\#File Name: ".expand("%"))
+        call append(line(".")+3, "\#Created Time: ".strftime("%Y-%m-%d %H:%M:%S"))
+        call append(line(".")+4, "\#######################################")
         call append(line(".")+5, "")
+        call append(line(".")+6, "")
     endif
 endfunc
 
